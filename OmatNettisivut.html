@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 30%;
+  }
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.fa-star {
+  color: white;
+  font-size: 1.5rem;
+  animation-name: star;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.star1 {
+  position: relative;
+  right: 30rem;
+  top: 10rem;
+  animation-duration: 1.2s;
+}
+.star2 {
+  position: relative;
+  left: 10rem;
+  top: 1rem;
+  animation-duration: 1.9s;
+}
+.star3 {
+  position: relative;
+  left: 40rem;
+  top: 15rem;
+  animation-duration: 1.6s;
+}
+@keyframes star {
+  50% {
+      transform: scale(0.5);
+      opacity: 0.5;
+  }
+}
+  
+
+.fa-cloud {
+  color: white;
+  font-size: 10rem;
+  animation-name:pilvi;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes pilvi {
+  0% {
+      transform: scale(0.5);
+      opacity: 0.5;
+      left: -15rem;
+    }
+  25% {
+    left: 15rem;
+  }
+  100% {
+    left: -15rem;
+  }
+}
+
+#navbar {
+  background-color: Crimson;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+nav ul {
+  width: 60rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+nav li {
+  list-style: none;
+  padding: 1rem;
+  
+}
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem 1rem 1.4rem 1rem;
+  border-radius: 3rem;
+  font-weight: 900;
+}
+
+.nav-list a:hover {
+  background: #B0C4DE;
+  transition: background 0.4s ease-out;
+}
+
+#welcome-section {
+  background: linear-gradient(black, #000000, #000099, #66c2ff, #ffcccc, SkyBlue);
+  font-size: 3rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+}
+
+#motto {
+  padding: 6rem;
+}
+
+#welcome-section h1 {
+  font-weight: 1000;
+  margin: 0rem 75rem 0rem 75rem;
+  border-radius: 3rem;
+}
+
+.welcome-section-h1:hover {
+  text-shadow: 0.4rem .4rem 2rem rgba(0, 0, 0, 0.9);
+  transition: text-shadow 0.4s ease-out;
+  transform: translateY(-0.3rem);
+  transition: transform 0.3s ease-out;
+}
+
+#welcome-section h3 {
+  font-weight: 100;
+}
+
+#minusta {
+  background-color: SkyBlue;
+  color: white;
+  text-align: center;
+  align-items:center;
+  justify-content: center;
+  padding: 10rem 2rem;
+}
+
+.minusta-h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  border-radius: 3rem;
+  padding: 2rem 0.5rem;
+}
+
+.minusta-h1:hover {
+  text-shadow: 1rem 1rem 2.5rem rgba(255, 255, 255, 0.9);
+  transition: box-shadow 0.4s ease-out;
+  transform: translateY(-0.6rem);
+  transition: transform 0.4s ease-out;
+}
+.minustalaatikko {
+  background: white;
+  color: black;
+  height: auto;
+  width: 100%;
+  border: .2rem solid white;
+  box-shadow: .1rem .1rem 2rem rgba(255, 250, 250, 0.2);
+  border-radius: 2rem;
+}
+
+.minustalaatikko:hover {
+  box-shadow: .5rem .5rem 2rem rgba(255, 255, 255, .7);
+  transition: box-shadow 0.2s ease-out;
+}
+.minustalaatikko li {
+  list-style: none;
+  padding: 1rem;
+}
+
+#cv {
+  background: linear-gradient(SkyBlue, LightSkyBlue, LightBlue,#ffcccc, #7CFC00,gray, grey, #2F4F4F);
+  text-align: center;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.cv-title {
+  font-size: 3rem;
+  border: .2rem solid transparent;
+  border-radius: 3rem;
+  padding: 2rem 0.5rem;
+}
+
+.cv-title:hover {
+  text-shadow: 1rem 1rem 2.5rem rgba(0, 0, 0, 0.9);
+  transition: box-shadow 0.4s ease-out;
+  transform: translateY(-0.6rem);
+  transition: transform 0.4s ease-out;
+}
+
+
+
+.imgcv {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7);
+  margin-top: 3rem;
+}
+
+.imgcv:hover {
+  box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.93);
+  transition: box-shadow 0.2s ease-out;
+}
+
+.fa-building {
+  position: relative;
+  right: 3rem;
+  top: 10rem;
+  font-size: 10rem;
+  padding: 2rem;
+}
+
+.fa-car-side {
+  color: red;
+  font-size: 6rem;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: auto;
+  position: relative;
+  
+}
+@keyframes auto {
+  0% {
+    right: 15rem;
+    top: 10rem;
+  }
+  20% {
+    right: 1rem;
+    top: 10rem;
+  }
+  40% {
+    top: 0rem;
+    right: 0.5rem;
+  }
+  60% {
+    top: 0rem;
+    right: -30rem;
+  }
+  80% {
+    top: 10rem;
+    right: -33rem;
+  }
+  100% {
+    right: -45rem;
+    top: 10rem;
+  }
+}
+
+
+
+.projects-section {
+  background: linear-gradient(#2F4F4F, gray, SandyBrown, Peru, LightSeaGreen);
+  text-align: center;
+  padding: 10rem 2rem;
+}
+
+.projects-section-header {
+  max-width: 20rem;
+  margin: 0 auto 60px auto;
+  border-bottom: 2px solid black;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+
+.project-image {
+  height: calc(100% - 7rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.project {
+  background: gray;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 3rem;
+}
+
+.project:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.2s ease-out;
+}
+
+.code {
+  color: gray;
+}
+
+.project:hover .code {
+  color: blue;
+  transition: color 0.3s ease-out;
+}
+
+#contact {
+  background: linear-gradient(LightSeaGreen, Skyblue, Blue, Black);
+  font-size: 30px;
+  text-align: center;
+  padding: 100px 0 300px 0;
+}
+
+@media (max-width: 800px){
+  #contact {
+    font-size: 15px;
+  }
+}
+
+.contacts-title {
+  margin-top: 30px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  padding: 2rem;
+}
+
+.contact-details:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  transition: text-shadow 0.3s ease-out;
+  transform: translateY(8px);
+  transition: transform 0.3s ease-out;
+}
+
+.fa-fish {
+  color: black;
+  font-size: 9rem;
+  animation-name:kala;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-timing-function: linear;
+}
+
+@keyframes kala {
+  0% {
+      right: 25rem;
+      top: 0rem;
+      
+  }
+  50% {
+    top: 10rem;
+  }
+  100% {
+    right: -25rem;
+    top: 0rem;
+  }
+}
+</style>
+
+<html>
+    <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<nav id='navbar'>
+    <ul class='nav-list'>
+      <li><a class="nav-link" href='#welcome-section'>Aloitus</a></li>
+      <li><a class="nav-link" href='#minusta'>Minusta</a></li>
+      <li><a class="nav-link" href='#cv'>CV</a></li>
+      <li><a class="nav-link" href='#projects'>Projektit</a></li>
+      <li><a class="nav-link" href='#contact'>Yhteystiedot</a></li>
+    </ul>
+</nav>
+
+<head>
+    <section id='welcome-section'>
+    <div>
+        <i class="fas fa-star star1"></i>
+        <i class="fas fa-star star2"></i>
+        <i class="fas fa-star star3"></i>
+    </div>
+    <h1 class='welcome-section-h1' style='color:white'>Väinö</h1>
+    <h1 class='welcome-section-h1' style='color:white'>Rantanen</h1>
+    <h3 style='color:white'><em>Tuotantotalouden teekkari,</em></h3>
+    <h3 style='color:white'><em>Tampereen yliopisto</em></h3>
+    <div id='motto'>
+        <h1 class='welcome-section-h1'><em>"Luottamus,</em></h1>
+        <h1 class='welcome-section-h1'><em>innostus,</em></h1>
+        <h1 class='welcome-section-h1'><em>uteliaisuus,</em></h1>
+        <h1 class='welcome-section-h1'><em>asenne"</em></h1>
+    </div>
+    </section>
+</head>
+
+<body>
+    <section id='minusta'>
+    <i class="fas fa-cloud"></i>
+    <h1 class='minusta-h1'>Kuka oon mitä teen?</h1>
+    <div class='projects-grid'>
+        <div class='minustalaatikko'>
+        <h3>Kiinnostukset</h3>
+        <p>(urheilen paljon)</p><hr>
+            <ul>
+            <li>Kuntosali</li><hr>
+            <li>Frisbeegolf</li><hr>
+            <li>Tekniikka</li><hr>
+            <li>Talous</li><hr>
+            </ul>
+        </div>
+        <div class='minustalaatikko'>
+        <h3>Koulutus</h3>
+        <li>Tampereen yliopisto, Tuotantotalous 2021-2026</li><hr>
+        <li>Vammalan lukio 2017-2020</li><hr>
+        </div>
+        <div class='minustalaatikko'>
+        <h3>Tavoitteet</h3>
+        <li>Oppia mahdollisimman paljon uutta</li><hr>
+        <li>Kehittää itseäni</li><hr>
+        <li>Astua mukavuusalueen ulkopuolelle</li><hr>
+        <li>Saada alalta kokemusta</li><hr>
+        </div>
+    </div>
+    </section>
+
+    <section id='cv'>
+    <h2 class='cv-title'>Tässä mun CV</h2>
+    <img
+        class='imgcv'
+        src='https://i.gyazo.com/e060f1b47b564f3d47beb9782e3049b3.png'
+        alt='vainorin cv'
+        />
+    <div>
+        <i class="fas fa-car-side"></i>
+        <i class="fas fa-building"></i>
+        <i class="fas fa-building"></i>
+    </div>
+    </section>
+
+    <section id='projects' class='projects-section'>
+    <h2 class='projects-section-header'>Projekteista</h2>
+    <div class='projects-grid'>
+        <a 
+            href='https://codepen.io/vainor/pen/WNZJbPR' 
+            target='_blank'
+            class='project project-tile'
+        >
+            <img
+            class="project-image"
+            src='https://i.gyazo.com/7fcca65f95702dd837be9f82db20c711.png'
+            alt='äijät kalassa'
+            />
+            <p class='project-title'>
+            <span class="code">&lt;</span>
+            Tribute Page
+            <span class="code">&#47;&gt;</span>
+            </p>
+        </a>
+        <a
+            href='https://codepen.io/vainor/pen/WNZJPWz'
+            target='_blank'
+            class='project ptoject-tile'>
+            <img
+                src='https://i.gyazo.com/8983ab7d70910a92a53ca39ce23c55e1.png'
+                alt='technicaldoc'
+                class='project-image'
+                />
+            <p class='project-title'>
+            <span class='code'>&lt;</span>
+            Technical documentation page
+            <span class='code'>&#47;&gt;</span>
+            </p>
+        </a>
+        <a
+        href='https://codepen.io/vainor/pen/GRMdjMa'
+        target='_blank'
+        class='project project-tile'
+        >
+        <img
+                src='https://i.gyazo.com/c15b4de5dae19578f7d5b0791a94c2e5.png'
+                alt='prductlandingpage'
+                class='project-image'
+                />
+        <p class='project-title'>
+            <span class='code'>&lt;</span>
+            Product landing page
+            <span class='code'>&#47;&gt;</span>
+        </p>
+        </a>
+        <a
+        href='https://codepen.io/vainor/pen/ExwLVRN'
+        target='_blank'
+        class='project project-tile'
+        >
+        <img
+                src='https://i.gyazo.com/8493ba29955cbfc667a5ae80d58d6280.png'
+                alt='prductlandingpage'
+                class='project-image'
+                />
+        <p class='project-title'>
+            <span class='code'>&lt;</span>
+            Survey form
+            <span class='code'>&#47;&gt;</span>
+        </p>
+        </a>
+    </div>
+    </section>
+
+    <section id='contact' class='contact-section'>
+    <div>
+        <h1><strong>Jos luet tätä...</strong></h1>
+        <h1>Minua kiinnostaisi työskennellä teidän organisaatiossa!</h1>
+        <h3 class='contacts-title'>Tässä yhteystietoni:</h3>
+    </div>
+    <div class='contact-links'>
+        <a
+        href='https://www.linkedin.com/in/v%C3%A4in%C3%B6-rantanen-965723204/'
+        target='_blank'
+        class='contact-details'>
+        <i class="fab fa-linkedin"></i> Linkedin
+        </a>
+        <a id='profile-link' 
+        href='https://www.freecodecamp.org/fccbea0088f-9a49-4e25-93e1-0308351ac395' 
+        target='_blank'
+        class='contact-details'>FCC profile
+        </a>
+        <a
+        href='tel: 555-555-5555'
+        target='_blank'
+        class='contact-details'>
+        <i class="fas fa-mobile-alt"></i> Puhelin
+        </a>
+        <a
+        href='mailto:vaino01@hotmail.fi'
+        target='_blank'
+        class='contact-details'>
+        <i class="fas fa-envelope"></i> Sähköposti
+        </a>
+    </div>
+    <h3>Kiitos mielenkiinnosta!</h3>
+        <i class="fas fa-fish"></i>
+    </section>
+</body>
+</html>
